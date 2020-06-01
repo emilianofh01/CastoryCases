@@ -4,9 +4,9 @@ import './styles/homepage.css'
 class homepage extends React.Component {
     render() {
         return(
-            <React.Fragment>
-
-            </React.Fragment>
+            <div>
+                
+            </div>
         )
     }
 }

@@ -1,0 +1,31 @@
+.Navbar {
+    width: 100%;
+    display: flex;
+}
+
+.nav {
+    width: inherit;
+    height: 71px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.nav li {
+    list-style: unset;
+}
+
+.logo {
+    width: 350px;
+}
+
+.logo_Container {
+    justify-self: left !important;
+}
+
+input[type="search"] {
+    width: 30vw;
+    height: 35px;
+    border-radius: 20px;
+    border-style: unset;
+}
+
