@@ -6,7 +6,7 @@ class Avatar extends React.Component {
     render() {
         return(
             <React.Fragment>
-                <img className="avatar" src={avatarImg}/>
+                <img alt="Avatar" className="avatar" src={avatarImg}/>
             </React.Fragment>
         )
     }

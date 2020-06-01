@@ -4,7 +4,7 @@ import Navbar from './Navbar'
 function Layout(props) {
 return(
         <React.Fragment> 
-            {window.location.pathname == '/test' || window.location.pathname == '/test/' ? '' : <Navbar/>}
+            {window.location.pathname === '/test' || window.location.pathname === '/test/' ? '' : <Navbar/>}
             {props.children}
         </React.Fragment>
     )
