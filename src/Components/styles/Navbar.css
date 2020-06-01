@@ -56,4 +56,16 @@ input[type="text"] {
     
 }
 
+.button_personaliza {
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: 2px solid white;
+}
+.button_personaliza a{
+    color:white;
+    font-family: 'Lato', sans-serif !important;
+    font-size: 15px;
+    font-weight: bold;
+}
+
 

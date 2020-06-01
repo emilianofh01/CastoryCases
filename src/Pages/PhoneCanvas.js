@@ -1,7 +1,9 @@
 import React from 'react';
 class PhoneCanvas extends React.Component{
 
-    constructor(props){
+    constructor(props)
+    {
+        super(props)
         this.state = {
             mask: "",
             case: "",
