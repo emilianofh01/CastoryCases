@@ -3,8 +3,8 @@ import Navbar from './Navbar'
 
 function Layout(props) {
 return(
-        <React.Fragment>
-            {window.location.pathname == '/test' ? '' : <Navbar/>}
+        <React.Fragment> 
+            {window.location.pathname == '/test' || window.location.pathname == '/test/' ? '' : <Navbar/>}
             {props.children}
         </React.Fragment>
     )
