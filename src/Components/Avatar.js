@@ -1,5 +1,5 @@
 import React from 'react'
-import avatarImg from '../media/images/avatar2.jpg'
+import avatarImg from '../media/images/avatar.jpg'
 import './styles/Avatar.css'
 
 class Avatar extends React.Component {

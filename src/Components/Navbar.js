@@ -11,11 +11,19 @@ class Navbar extends React.Component {
         return(
             <div className="Navbar">
                 <ul className="nav">
-                    <li className="logo_Container"><Link to="#"><img alt="logo" className="logo" src={logo}/></Link></li>
+                    <li className="logo_Container">
+                        <Link to="#"><img alt="logo" className="logo" src={logo}/></Link>
+                        </li>
                     <li><SearchBar/></li>
-                    <li className="button_personaliza"><Link to="#">¡Personaliza!</Link></li>
-                    <li><Link to="#"><span className="icon-shopping-cart-solid cart-icon"></span></Link></li>
-                    <li className="avatarImg"><Link to="#"><Avatar/></Link></li>
+                    <li className="button_personaliza">
+                        <Link to="#">¡Personaliza!</Link>
+                        </li>
+                    <li>
+                        <Link to="#"><span className="icon-shopping-cart-solid cart-icon"></span></Link>
+                        </li>
+                    <li className="avatarImg">
+                        <Link to="#"><Avatar/></Link>
+                        </li>
                 </ul>
             </div>
         )
