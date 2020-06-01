@@ -4,8 +4,8 @@ import './styles/homepage.css'
 class homepage extends React.Component {
     render() {
         return(
-            <div>
-                
+            <div className="homepage_container">
+
             </div>
         )
     }

@@ -10,12 +10,12 @@ class Navbar extends React.Component {
                 <ul className="nav">
                     <li className="logo_Container"><Link to="#"><img className="logo" src={logo}/></Link></li>
                     <li>
-                        <form> 
-                            <input type="search"/>
-                            <input value="nada" type="submit"/>
+                        <form className="SearchComponent__container"> 
+                            <input className="searchComponent" type="text"/>
+                            <input className="icon-search-solid Search__button" value={"\ue90a"} type="submit"/>
                         </form>
                         </li>
-                    <li><Link to="#">¡Personaliza!</Link></li>
+                    <li className="button_personaliza"><Link to="#">¡Personaliza!</Link></li>
                     <li><Link to="#">AC</Link></li>
                     <li><Link to="#"><img src="#"/></Link></li>
                 </ul>

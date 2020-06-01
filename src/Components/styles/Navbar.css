@@ -1,31 +1,59 @@
+.SearchComponent__container {
+    height: 36px;
+}
 .Navbar {
     width: 100%;
     display: flex;
+    align-items: center;
+    position: fixed;
 }
 
 .nav {
+    align-items: inherit;
     width: inherit;
-    height: 71px;
+    height: 70px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 }
 .nav li {
-    list-style: unset;
+    display: inherit;
+    align-items: center;
+    list-style: none;
 }
 
+.nav li form {
+    display: inherit;
+    align-items: inherit;
+}
+
+
 .logo {
-    width: 350px;
+    width: 380px;
 }
 
 .logo_Container {
     justify-self: left !important;
 }
 
-input[type="search"] {
+input[type="text"] {
     width: 30vw;
-    height: 35px;
+    height: 100%;
     border-radius: 20px;
     border-style: unset;
+    padding-left: 10px;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
 }
+.Search__button {
+    width: 30px;
+    height: 100%;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-style: none;
+    background-color: #07A4FC;
+    color:white;
+    
+}
+
 
