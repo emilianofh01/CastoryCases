@@ -5,12 +5,13 @@ import homepage from '../Pages/homepage'
 import '../global.css'
 import PhoneCanvas from '../Pages/PhoneCanvas'
 
-function App() {
+function App(props) {
+    
     return(
         <BrowserRouter>
-                    <Route exact path="/test" component={PhoneCanvas}/>
-        <Layout>
+        <Layout hasTobeRendered={false}>
             <Switch>
+                    <Route exact path="/test" component={PhoneCanvas}/>
                     <Route exact path="/" component={homepage}/>
             </Switch>
         </Layout>
