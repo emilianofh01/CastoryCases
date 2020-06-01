@@ -9,7 +9,7 @@ function App(props) {
     
     return(
         <BrowserRouter>
-        <Layout hasTobeRendered={false}>
+        <Layout>
             <Switch>
                     <Route exact path="/test" component={PhoneCanvas}/>
                     <Route exact path="/" component={homepage}/>

@@ -1,7 +1,9 @@
 import React from 'react';
 import {Link} from 'react-router-dom'
-import logo from '../media/remaster2.png'
+import logo from '../media/images/remaster2.png'
 import './styles/Navbar.css'
+import Avatar from './Avatar'
+
 
 class Navbar extends React.Component {
     render() {
@@ -16,8 +18,8 @@ class Navbar extends React.Component {
                         </form>
                         </li>
                     <li className="button_personaliza"><Link to="#">¡Personaliza!</Link></li>
-                    <li><Link to="#">AC</Link></li>
-                    <li><Link to="#"><img src="#"/></Link></li>
+                    <li><Link to="#"><span class="icon-shopping-cart-solid cart-icon"></span></Link></li>
+                    <li className="avatarImg"><Link to="#"><Avatar/></Link></li>
                 </ul>
             </div>
         )
