@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "itemTitle": "Rick y Morty - iPhone 11",
+        "itemPrice": 250,
+        "image": "https://ih1.redbubble.net/image.1000679751.3867/icr,iphone_11_soft,back,a,x1000-bg,f8f8f8.jpg"
+    },
+    {
+        "id": 2,
+        "itemTitle": "Rick y Morty - iPhone X",
+        "itemPrice": 250,
+        "image": "https://ih1.redbubble.net/image.1000679751.3867/mwo,x1000,iphone_xs_soft-pad,1000x1000,f8f8f8.jpg"
+
+    },
+    {
+        "id": 3,
+        "itemTitle": "Japón - iPhone X",
+        "itemPrice": 250,
+        "image": "https://ih1.redbubble.net/image.578176039.2751/icr,iphone_11_soft,back,a,x1000-pad,1000x1000,f8f8f8.u1.jpg"
+
+    }
+    
+]

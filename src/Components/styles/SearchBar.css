@@ -55,7 +55,7 @@ input[type="text"] {
 }
 
 .itemImage {
-    width: 50px;
+    width: 55px;
     height: 103px;
     object-fit: cover;
     
@@ -75,4 +75,8 @@ input[type="text"] {
     font-size: 23px;
     color: #2d2d2d;
     padding: 5px;
+}
+
+.NoResult {
+    padding:20px;
 }
