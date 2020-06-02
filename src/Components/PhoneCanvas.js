@@ -45,8 +45,8 @@ class PhoneCanvas extends React.Component{
         if(this.canvasContext){
             this.canvasContext.fillStyle = 'rgb(160, 160, 160)';
             this.canvasContext.fillRect(0, 0, this.canvas.current.width, this.canvas.current.width);
-            this.props.mask && this.mask && this.canvasContext.drawImage(this.mask,0,0);
-            this.props.case && this.case && this.canvasContext.drawImage(this.case,0,0);
+            this.mask && this.canvasContext.drawImage(this.mask,0,0);
+            this.case && this.canvasContext.drawImage(this.case,0,0);
         }
     }
 }
