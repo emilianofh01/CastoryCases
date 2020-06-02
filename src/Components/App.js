@@ -4,7 +4,9 @@ import Layout from './Layout'
 import homepage from '../Pages/homepage'
 import '../global.css'
 import '../normalize.css'
-import PhoneCanvas from '../Pages/PhoneCanvas'
+import PhoneCanvas from './PhoneCanvas'
+import testpage from "../test/testpage";
+
 
 function App(props) {
     
@@ -12,7 +14,7 @@ function App(props) {
         <BrowserRouter>
         <Layout>
             <Switch>
-                    <Route exact path="/test" component={PhoneCanvas}/>
+                    <Route exact path="/test" component={testpage}/>
                     <Route exact path="/" component={homepage}/>
                     <Redirect from="*" to="/" />
             </Switch>

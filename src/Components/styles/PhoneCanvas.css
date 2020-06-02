@@ -1,0 +1,13 @@
+.phone-canvas_Container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.phone-canvas{
+    
+}
+
+.smartphone{
+    position: absolute;
+}
