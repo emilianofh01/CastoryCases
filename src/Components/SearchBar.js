@@ -1,5 +1,6 @@
 import React, { useCallback, useState } from 'react'
 import './styles/SearchBar.css'
+import {Link} from 'react-router-dom'
 const API = "https://emilianofh01.github.io/hyperblog/data.json"
 
 class SearchBar extends React.Component {
@@ -40,11 +41,12 @@ class SearchBar extends React.Component {
                         <ul className={this.state.busqueda ? "SearchComponent__results-container show": "SearchComponent__results-container"}>
                             <h3 className="results">Resultados</h3>
                             {DatosFiltrados.length && this.state.busqueda !== " " ? DatosFiltrados.map((producto)=>(
-                                
                                 <li key={producto.id} className="item_result">
-                                    <img className="itemImage" src={producto.image} alt="CasePhoto"/>
-                                    <p className="item_title">{producto.itemTitle}</p>
-                                    <p className="item_price">${producto.itemPrice} MXN</p>
+                                    <Link className="linkProduct" to={`/?${producto.id}`}>
+                                        <img className="itemImage" src={producto.image} alt="CasePhoto"/>
+                                        <p className="item_title">{producto.itemTitle}</p>
+                                        <p className="item_price">${producto.itemPrice} MXN</p>
+                                    </Link>
                                 </li>
                             )): <p className="NoResult">No se han encontrado resultados para "{this.state.busqueda}" </p>}
 
