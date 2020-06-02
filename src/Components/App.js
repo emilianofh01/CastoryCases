@@ -16,7 +16,7 @@ function App(props) {
             <Switch>
                     <Route exact path="/test" component={testpage}/>
                     <Route exact path="/" component={homepage}/>
-                    <Redirect from="*" to="/" />
+                    {/* <Redirect from="*" to="/" /> */}
             </Switch>
         </Layout>
         </BrowserRouter>

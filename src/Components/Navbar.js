@@ -12,7 +12,7 @@ class Navbar extends React.Component {
             <div className="Navbar">
                 <ul className="nav">
                     <li className="logo_Container">
-                        <Link to="#"><img alt="logo" className="logo" src={logo}/></Link>
+                        <Link to="/"><img alt="logo" className="logo" src={logo}/></Link>
                         </li>
                     <li><SearchBar/></li>
                     <li className="button_personaliza">

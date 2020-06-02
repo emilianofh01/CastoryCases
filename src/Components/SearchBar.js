@@ -35,14 +35,14 @@ class SearchBar extends React.Component {
             <div className="SearchComponent__Search">
                         <form className="SearchBar__container"> 
                             <input value={this.state.busqueda} onChange={this.filtrar} className="searchBar" type="text"/>
-                            <input className="icon-search-solid Search__button" value={"\ue90a"} type="submit"/>
+                            <input onClick={(e)=> e.defaultPrevented()} className="icon-search-solid Search__button" value={"\ue90a"} type="submit"/>
                         </form>
                         
                         <ul className={this.state.busqueda ? "SearchComponent__results-container show": "SearchComponent__results-container"}>
                             <h3 className="results">Resultados</h3>
                             {DatosFiltrados.length && this.state.busqueda !== " " ? DatosFiltrados.map((producto)=>(
                                 <li key={producto.id} className="item_result">
-                                    <Link className="linkProduct" to={`/?${producto.id}`}>
+                                    <Link className="linkProduct" to={`/cases/?=${producto.id}`}>
                                         <img className="itemImage" src={producto.image} alt="CasePhoto"/>
                                         <p className="item_title">{producto.itemTitle}</p>
                                         <p className="item_price">${producto.itemPrice} MXN</p>
