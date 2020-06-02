@@ -80,3 +80,7 @@ input[type="text"] {
 .NoResult {
     padding:20px;
 }
+
+.linkProduct {
+    display: inherit;
+}
