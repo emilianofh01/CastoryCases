@@ -1,6 +1,6 @@
 import React, { useCallback, useState } from 'react'
 import './styles/SearchBar.css'
-import Data from '../data.json'
+const API = "https://emilianofh01.github.io/hyperblog/data.json"
 
 class SearchBar extends React.Component {
     constructor(props) 
@@ -9,12 +9,18 @@ class SearchBar extends React.Component {
         this.state = 
         {
             busqueda: '',
-            productos: Data,
+            productos: [],
             
         }    
         this.productos = this.state.productos
     }
     filtrar = (busqueda) => this.setState({busqueda:busqueda.target.value});
+    
+    componentDidMount() {
+        fetch(API)
+      .then(response => response.json())
+      .then(data => this.setState({ productos: data }));
+    }
 
     render() {
         const removeAccents = str => str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
@@ -31,7 +37,7 @@ class SearchBar extends React.Component {
                         
                         <ul className={this.state.busqueda ? "SearchComponent__results-container show": "SearchComponent__results-container"}>
                             <h3 className="results">Resultados</h3>
-                            {DatosFiltrados.length && this.state.busqueda != " " ? DatosFiltrados.map((producto)=>(
+                            {DatosFiltrados.length && this.state.busqueda !== " " ? DatosFiltrados.map((producto)=>(
                                 
                                 <li key={producto.id} className="item_result">
                                     <img className="itemImage" src={producto.image} alt="CasePhoto"/>
