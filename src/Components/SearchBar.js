@@ -17,7 +17,7 @@ class SearchBar extends React.Component {
     filtrar = (busqueda) => this.setState({busqueda:busqueda.target.value});
 
     render() {
-        const removeAccents = (str) => str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+        const removeAccents = str => str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
         const {busqueda, productos} = this.state
         const lowerCasedFilter = removeAccents(busqueda.toLowerCase());
         const DatosFiltrados = productos.filter(producto => removeAccents(producto.itemTitle.toLowerCase()).includes(lowerCasedFilter))
