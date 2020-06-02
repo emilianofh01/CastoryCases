@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useCallback, useState } from 'react'
 import './styles/SearchBar.css'
 
 class SearchBar extends React.Component {
@@ -7,10 +7,24 @@ class SearchBar extends React.Component {
         super(props);
         this.state = 
         {
+            busqueda: '',
             productos: 
             [
                 {
-                    itemTitle: 'Carcasa de uso rudo',
+                    id: '1',
+                    itemTitle: 'Bob Esponja',
+                    itemPrice: 300,
+                    image: 'https://funcases.mx/wp-content/uploads/2019/03/Huawei-Mate-20-Lite-Plastic-Case-600x750.jpg',
+                },
+                {
+                    id: '2',
+                    itemTitle: 'Pepe',
+                    itemPrice: 300,
+                    image: 'https://funcases.mx/wp-content/uploads/2019/03/Huawei-Mate-20-Lite-Plastic-Case-600x750.jpg',
+                },
+                {
+                    id: '3',
+                    itemTitle: 'Christian',
                     itemPrice: 300,
                     image: 'https://funcases.mx/wp-content/uploads/2019/03/Huawei-Mate-20-Lite-Plastic-Case-600x750.jpg',
                 }
@@ -18,22 +32,34 @@ class SearchBar extends React.Component {
         }    
         this.productos = this.state.productos
     }
-
+    filtrar = (busqueda) => 
+    {
+        this.setState({busqueda:busqueda.target.value})
+        
+    }
     render() {
-        console.log(this.productos)
+        const {busqueda, productos} = this.state
+        const lowerCasedFilter = busqueda.toLowerCase();
+        const DatosFiltrados = productos.filter(producto => producto.itemTitle.toLowerCase().includes(lowerCasedFilter))
+
         return(
             <div className="SearchComponent__Search">
                         <form className="SearchBar__container"> 
-                            <input className="searchBar" type="text"/>
+                            <input value={this.state.busqueda} onChange={this.filtrar} className="searchBar" type="text"/>
                             <input className="icon-search-solid Search__button" value={"\ue90a"} type="submit"/>
                         </form>
-                        <ul className="SearchComponent__results-container">
-                            <h3>Resultados</h3>
-                            <li className="item_result">
-                                <img className="itemImage" src={this.productos[0].image} alt="CasePhoto"/>
-                                <p className="item_title">{this.productos[0].itemTitle}</p>
-                                <p className="item_price">{this.productos[0].itemPrice}</p>
-                            </li>
+                        
+                        <ul className={this.state.busqueda ? "SearchComponent__results-container show": "SearchComponent__results-container"}>
+                            <h3 className="results">Resultados</h3>
+                            {this.state.busqueda ? DatosFiltrados.map((producto)=>(
+                                
+                                <li key={producto.id} className="item_result">
+                                    <img className="itemImage" src={producto.image} alt="CasePhoto"/>
+                                    <p className="item_title">{producto.itemTitle}</p>
+                                    <p className="item_price">${producto.itemPrice} MXN</p>
+                                </li>
+                            )): ''}
+
                         </ul>
             </div>
         )
