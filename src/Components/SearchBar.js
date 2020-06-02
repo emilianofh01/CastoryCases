@@ -16,7 +16,8 @@ class SearchBar extends React.Component {
         this.productos = this.state.productos
     }
     filtrar = (busqueda) => this.setState({busqueda:busqueda.target.value});
-    
+    searchReset = () => this.setState({busqueda:''})
+
     componentDidMount() {
         setInterval(()=>{
             fetch(API)
@@ -24,7 +25,7 @@ class SearchBar extends React.Component {
           .then(data => this.setState({ productos: data }));
         }, 1000)
     }
-
+    
     render() {
         const removeAccents = str => str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
         const {busqueda, productos} = this.state
@@ -42,7 +43,7 @@ class SearchBar extends React.Component {
                             <h3 className="results">Resultados</h3>
                             {DatosFiltrados.length && this.state.busqueda !== " " ? DatosFiltrados.map((producto)=>(
                                 <li key={producto.id} className="item_result">
-                                    <Link className="linkProduct" to={`/cases/?=${producto.id}`}>
+                                    <Link onClick={this.searchReset} className="linkProduct" to={`/cases/id?=${producto.id}`}>
                                         <img className="itemImage" src={producto.image} alt="CasePhoto"/>
                                         <p className="item_title">{producto.itemTitle}</p>
                                         <p className="item_price">${producto.itemPrice} MXN</p>
