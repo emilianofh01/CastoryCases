@@ -22,7 +22,7 @@
 }
 
 .nav li form {
-    display: inherit;
+    display: flex;
     align-items: inherit;
 }
 
