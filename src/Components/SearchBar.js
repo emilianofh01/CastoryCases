@@ -31,7 +31,7 @@ class SearchBar extends React.Component {
                         
                         <ul className={this.state.busqueda ? "SearchComponent__results-container show": "SearchComponent__results-container"}>
                             <h3 className="results">Resultados</h3>
-                            {DatosFiltrados.length ? DatosFiltrados.map((producto)=>(
+                            {DatosFiltrados.length && this.state.busqueda != " " ? DatosFiltrados.map((producto)=>(
                                 
                                 <li key={producto.id} className="item_result">
                                     <img className="itemImage" src={producto.image} alt="CasePhoto"/>
