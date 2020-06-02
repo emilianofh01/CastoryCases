@@ -17,9 +17,11 @@ class SearchBar extends React.Component {
     filtrar = (busqueda) => this.setState({busqueda:busqueda.target.value});
     
     componentDidMount() {
-        fetch(API)
-      .then(response => response.json())
-      .then(data => this.setState({ productos: data }));
+        setInterval(()=>{
+            fetch(API)
+          .then(response => response.json())
+          .then(data => this.setState({ productos: data }));
+        }, 1000)
     }
 
     render() {

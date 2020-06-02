@@ -21,17 +21,23 @@
     },
     {
         "id": 4,
-        "itemTitle": "Japón - iPhone X",
-        "itemPrice": 250,
-        "image": "https://ih1.redbubble.net/image.578176039.2751/icr,iphone_11_soft,back,a,x1000-pad,1000x1000,f8f8f8.u1.jpg"
-
-    },
-    {
-        "id": 5,
         "itemTitle": "Patrón de comida de pollo - Samsung Galaxy S10",
         "itemPrice": 250,
         "image": "https://ih1.redbubble.net/image.817772690.3142/icr,samsung_galaxy_s10_snap,back,a,x1000-pad,1000x1000,f8f8f8.1.jpg"
 
+    },
+    {
+        "id": 5,
+        "itemTitle": "Vinil - iPhone 11",
+        "itemPrice": 200,
+        "image": "https://ih1.redbubble.net/image.1179779901.3490/icr,iphone_11_soft,back,a,x1000-pad,1000x1000,f8f8f8.u1.jpg"
+
+    },
+     {
+        "id": 6,
+        "itemTitle": "Producto master",
+        "itemPrice": 200,
+        "image": "https://ih1.redbubble.net/image.1179779901.3490/icr,iphone_11_soft,back,a,x1000-pad,1000x1000,f8f8f8.u1.jpg"
+
     }
-    
 ]
