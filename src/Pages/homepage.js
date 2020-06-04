@@ -5,8 +5,8 @@ class homepage extends React.Component {
     render() {
         return(
             <div className="pages homepage_container">
-                <span className="icon-paint-brush-solid" id="iconBrush"></span>
-                <span className="icon-paint-brush-solid" id="iconCatalogue"></span>
+                <span className="icon-paint-brush-solid icon" id="iconBrush"></span>
+                <span className="icon-paint-brush-solid icon" id="iconCatalogue"></span>
             </div>
         )
     }
