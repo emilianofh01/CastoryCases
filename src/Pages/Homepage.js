@@ -18,7 +18,7 @@ class homepage extends React.Component {
     renderRedirect = () => {
         setTimeout(()=> {
             this.setState({redirect:true})
-        },1000)
+        },2000)
     }
     render() {
         if(this.state.redirect) {

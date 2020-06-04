@@ -60,7 +60,7 @@
     background-size: cover;
     z-index: 1;
     left: 100%;
-    transition-duration: 0.2s;
-    transition-timing-function: ease-in;
+    transition-duration: 2s;
+    transition-timing-function: ease;
     -moz-transition-property: all;
   }
