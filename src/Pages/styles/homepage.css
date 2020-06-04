@@ -21,7 +21,7 @@
     height: 100vh;
 }
 
-.icon {
+#iconBrush {
     position: absolute;
     color: white;
     display: flex;
