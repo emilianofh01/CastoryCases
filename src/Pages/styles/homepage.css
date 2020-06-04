@@ -39,6 +39,13 @@
     font-size: 28px;
     width: 74px;
     height: 70px;
+    transition-timing-function: ease-in;
+    transition-property: all;
+    transition-duration: 0.15s;
+    cursor: pointer;
+}
+#iconBrush:hover {
+    background-color: #07A4FC;
     
 }
 
@@ -47,3 +54,13 @@
     border-bottom-right-radius: 20px;
     border-right: 2.5px solid white;
 }
+
+.Catalogue_container {
+    background-color: #161533;
+    background-size: cover;
+    z-index: 1;
+    left: 100%;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in;
+    -moz-transition-property: all;
+  }

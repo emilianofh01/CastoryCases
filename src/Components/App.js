@@ -1,11 +1,11 @@
 import React from "react";
 import {Switch, Redirect, BrowserRouter, Route} from 'react-router-dom'
 import Layout from './Layout'
-import container from '../Pages/container'
+import Homepage from '../Pages/Homepage'
 import '../global.css'
 //import '../normalize.css'
-import PhoneCanvas from './PhoneCanvas'
 import testpage from "../test/testpage";
+import selectDevice from '../Pages/selectDevice'
 
 
 
@@ -16,7 +16,8 @@ function App(props) {
         <Layout>
             <Switch>
                     <Route exact path="/test" component={testpage}/>
-                    <Route exact path="/" component={container}/>
+                    <Route exact path="/" component={Homepage}/>
+                    <Route exact path="/personaliza" component={selectDevice}/> 
                     {/* <Redirect from="*" to="/" /> */}
             </Switch>
         </Layout>
