@@ -1,11 +1,12 @@
 import React from "react";
 import {Switch, Redirect, BrowserRouter, Route} from 'react-router-dom'
 import Layout from './Layout'
-import homepage from '../Pages/homepage'
+import container from '../Pages/container'
 import '../global.css'
-import '../normalize.css'
+//import '../normalize.css'
 import PhoneCanvas from './PhoneCanvas'
 import testpage from "../test/testpage";
+import $ from 'jquery'
 
 
 function App(props) {
@@ -15,7 +16,7 @@ function App(props) {
         <Layout>
             <Switch>
                     <Route exact path="/test" component={testpage}/>
-                    <Route exact path="/" component={homepage}/>
+                    <Route exact path="/" component={container}/>
                     {/* <Redirect from="*" to="/" /> */}
             </Switch>
         </Layout>

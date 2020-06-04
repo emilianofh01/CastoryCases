@@ -4,11 +4,11 @@ import './styles/homepage.css'
 class homepage extends React.Component {
     render() {
         return(
-            <div className="homepage_container">
-
+            <div className="pages homepage_container">
+                <span className="icon-paint-brush-solid icon"></span>
             </div>
         )
     }
 }
 
-export default homepage;
+export default homepage
