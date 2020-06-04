@@ -6,7 +6,7 @@ import '../global.css'
 //import '../normalize.css'
 import PhoneCanvas from './PhoneCanvas'
 import testpage from "../test/testpage";
-import $ from 'jquery'
+
 
 
 function App(props) {
