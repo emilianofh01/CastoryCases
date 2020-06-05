@@ -66,7 +66,7 @@ class Catalogue extends React.Component {
                                     </div>
                                     <h2 className="deviceTitle"> {producto.productName}</h2>
                                     <p className="productModel"> {producto.productModel} </p>
-                                    <p className="devicePrice">$299.00</p>
+                                    <p className="devicePrice">${producto.productPrice}.00 MXN</p>
                                     <div></div>
                                 </div>
                             ))}
