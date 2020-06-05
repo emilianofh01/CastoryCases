@@ -77,9 +77,11 @@ class SearchResults extends React.Component {
                 <li key={producto.id} className="item_result">
                     <Link onClick={this.props.reset} className="linkProduct" to={`/cases/id?=${producto.id}`}>
                         <img className="itemImage" src={producto.productImages} alt="CasePhoto"/>
-                        <p className="item_title">{producto.productName} - {producto.productModel}</p>
+                        <div>
+                            <p className="item_title">{producto.productName} - {producto.productModel}</p>
+                            <p className="item_brand">Marca: {producto.productBrand} </p>
+                        </div>
                         <p className="item_price">${producto.productPrice} MXN</p>
-                        <p className="item_brand">Marca: {producto.productBrand} </p>
                         </Link>
                         </li>
                         )): this.state.loading ? <img className="loading" src={loading} alt="Loading"/>
