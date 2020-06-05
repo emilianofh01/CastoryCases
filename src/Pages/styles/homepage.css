@@ -55,11 +55,21 @@
     border-right: 2.5px solid white;
 }
 
-.Catalogue_container {
+#Catalogue {
     background-color: #161533;
     background-size: cover;
     z-index: 1;
     left: 100%;
+    transition-duration: 2s;
+    transition-timing-function: ease;
+    -moz-transition-property: all;
+  }
+
+  #Catalogue2 {
+    background-color: #161533;
+    background-size: cover;
+    z-index: 1;
+    left: -100%;
     transition-duration: 2s;
     transition-timing-function: ease;
     -moz-transition-property: all;

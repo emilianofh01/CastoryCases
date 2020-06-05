@@ -6,6 +6,7 @@ import '../global.css'
 //import '../normalize.css'
 import testpage from "../test/testpage";
 import selectDevice from '../Pages/selectDevice'
+import Catalogue from '../Pages/Catalogue'
 
 
 
@@ -18,6 +19,7 @@ function App(props) {
                     <Route exact path="/test" component={testpage}/>
                     <Route exact path="/" component={Homepage}/>
                     <Route exact path="/personaliza" component={selectDevice}/> 
+                    <Route exact path="/catalogo" component={Catalogue}/>
                     {/* <Redirect from="*" to="/" /> */}
             </Switch>
         </Layout>

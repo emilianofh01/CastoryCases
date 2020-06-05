@@ -10,15 +10,19 @@ import sonyIcon from '../media/images/sony.png'
 import {Link} from 'react-router-dom'
 
 class selectDevice extends React.Component {
-    irregularCircleOnLoad(e) {
+    irregularCircleOnLoad() {
         const head = document.querySelector(".headIrregular");
         head.style.top = "0%"
+        setTimeout(()=> {
+            head.style.position = "static"
+
+        }, 1500)
     }
+
     componentDidMount() {
         setTimeout(()=> {
             const container = document.querySelector(".selectDevice-container_titles-container");
             container.style.opacity = "100%";
-
         }, 1500)
     }
 
@@ -27,7 +31,7 @@ class selectDevice extends React.Component {
             <div className="selectDevice-container">
                 <img className="headIrregular" onLoad={this.irregularCircleOnLoad} width={`${window.screen.availWidth}px`} src={svg}/>
                 
-                <div className="selectDevice-container_titles-container">
+                <div onLoad={this.boxShadow} className="selectDevice-container_titles-container">
                     <h1 className="title-container_title">Antes de comenzar</h1>
                     <h2 className="title-container_subtitle">Indicanos la marca de tu celular</h2>
                     
@@ -54,7 +58,7 @@ class selectDevice extends React.Component {
                             </div> 
                     </div>
                     <div className="selectDevice_button-container">
-                        <a class="selectDevice-button">Siguente</a>
+                        <a className="selectDevice-button">Siguente</a>
                     </div>
                 </div>
             </div>

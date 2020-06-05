@@ -3,7 +3,7 @@
     box-shadow: 0px 0px 10px 0.5px rgba(0, 0, 0, .5);
     border-radius: 20px;
 }
-input[type="text"] {
+.searchBar {
     width: 30vw;
     height: 100%;
     border-radius: 20px 0 0 20px;
