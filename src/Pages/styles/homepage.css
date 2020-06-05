@@ -44,7 +44,7 @@
     transition-duration: 0.15s;
     cursor: pointer;
 }
-#iconBrush:hover {
+.icon:hover {
     background-color: #07A4FC;
     
 }
