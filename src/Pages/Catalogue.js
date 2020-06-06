@@ -26,7 +26,7 @@ class Catalogue extends React.Component {
     componentDidMount() {
         fetch(API + JSON.stringify(this.state.filter)) 
         .then(response => response.json())
-        .then(data => this.setState({productos:data, loading: true}))
+        .then(data => this.setState({productos:data, loading: false}))
         setTimeout(()=> {
             const bg_navbar = document.querySelector(".bg-container");
             // bg_navbar.style.top = "0%"
