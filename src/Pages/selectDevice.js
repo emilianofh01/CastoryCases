@@ -20,6 +20,10 @@ class selectDevice extends React.Component {
     }
 
     componentDidMount() {
+        setTimeout(() => {
+            alert(
+            "Hola maestra :D \nPor el momento esta caracteristica no se encuentra lista \nPuede ver nuestro catalogo, solo tiene que hacer click en la opcion del lado izquierdo en la pagina de inicio")
+        }, 5000)
         setTimeout(()=> {
             const container = document.querySelector(".selectDevice-container_titles-container");
             container.style.opacity = "100%";

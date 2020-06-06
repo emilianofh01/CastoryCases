@@ -10,6 +10,9 @@ class homepage extends React.Component {
             redirect2:false,
         }
     }
+    componentDidMount() {
+        
+    }
     nextPage = () => {
         const Catalogue = document.getElementById("Catalogue");
         

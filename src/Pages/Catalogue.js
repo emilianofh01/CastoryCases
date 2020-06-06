@@ -19,24 +19,34 @@ class Catalogue extends React.Component {
             loading: true,
             filter: {
                 productCustom: false,
+                priceRange: [0,1000]
             }
         }
     }
 
-    filtrar = async (e) => {
+    filtrar = (e) => {
         this.setState({loading:true})
         const id = e.target.id
-        var filter = {
-            productBrand: id
-        }
-
-        await fetch(API + JSON.stringify(filter)) 
+        var filter = this.state.filter
+        filter.productBrand = id
+        fetch(API + JSON.stringify(filter)) 
         .then(response => response.json())
         .then(data => this.setState({productos:data, loading: false}))
+        console.log(filter.productBrand)
 
+        this.setState({productBrand: filter.productBrand})
     }
 
+   
+
     fetch = () => {
+        this.setState({loading:true})
+        fetch(API + JSON.stringify(this.state.filter)) 
+        .then(response => response.json())
+        .then(data => this.setState({productos:data, loading: false}))
+    }
+    defaultFetch = () => {
+        delete this.state.filter.productBrand;
         this.setState({loading:true})
         fetch(API + JSON.stringify(this.state.filter)) 
         .then(response => response.json())
@@ -51,6 +61,28 @@ class Catalogue extends React.Component {
             catalogue.style.opacity = "1"
         },1000)
     }
+    priceFilterMin = (e) => {
+        var value = e.target.value
+        var filtrado = this.state.filter
+        if(value === "") {
+            filtrado.priceRange[0] = 0
+        } else {
+            filtrado.priceRange[0] = value;
+        }
+        this.setState({filter:filtrado})
+        console.log(filtrado)
+    }
+    priceFilterMax = (e) => {
+        var value = e.target.value
+        var filtrado = this.state.filter
+        if(value === "") {
+            filtrado.priceRange[1] = 9999
+        } else {
+            filtrado.priceRange[1] = value;
+        }
+        this.setState({filter:filtrado})
+        console.log(filtrado)
+    }
     render() {
         return(
             <React.Fragment>
@@ -62,8 +94,9 @@ class Catalogue extends React.Component {
                             <h1 className="title-filter">Filtro</h1>
                             <h3 className="price-title">Precio</h3>
                             <div className="txtBox-filter-container">
-                                <input className="filter" type="text" placeholder="Minimo"></input>
-                                <input className="filter" type="text" placeholder="Maximo"></input>
+                                <input onChange={this.priceFilterMin} min="0" max="9999" className="filter" type="number" placeholder="Min."></input>
+                                <input onChange={this.priceFilterMax} min="0" max="9999" className="filter"  type="number" placeholder="Max."></input>
+                                <a onClick={this.fetch} className="aplicarButton">Aplicar</a>
                             </div>
                             <h3 className="price-title">Marca</h3>
                             <div className="brandFilter">
@@ -73,7 +106,7 @@ class Catalogue extends React.Component {
                                 <img onClick={this.filtrar} id="Motorola" className="brandButtons" alt="BrandLogo" src={motorolaIcon}/>
                                 <img onClick={this.filtrar} id="Samsung" className="brandButtons" alt="BrandLogo" src={samsungIcon}/>
                                 <img onClick={this.filtrar} id="Sony"  className="brandButtons" alt="BrandLogo" src={sonyIcon}/>
-                                <p id="" className="brandButtons" onClick={this.fetch}>Todas las marcas</p>
+                                <p className="brandButtons" onClick={this.defaultFetch}>Todas las marcas</p>
                             </div>
                         </div>
 

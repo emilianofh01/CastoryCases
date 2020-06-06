@@ -57,12 +57,15 @@
 
 .txtBox-filter-container {
     display: flex;
+    /* flex-wrap: wrap; */
+    align-items: center;
+    justify-content: center;
 }
 
 .filter {
     outline: none;
-    width: 50%;
-    margin: 15px;
+    width: 35%;
+    margin: 10px;
     font-size: 15px;
     padding: 5px;
     border-style: none;
@@ -264,4 +267,16 @@ body::-webkit-scrollbar-thumb:active {
     width: 85%;
 
     background-color: #006BCE;
+}
+
+.aplicarButton {
+    flex: 1;
+    text-align: right;
+    padding: 10px;
+    height: 100%;
+    background-color: #006BCE;
+    color: white;
+    border-radius: 20px;
+    justify-self: right;
+    cursor: pointer;
 }
