@@ -29,10 +29,9 @@ class Catalogue extends React.Component {
         .then(data => this.setState({productos:data, loading: false}))
         setTimeout(()=> {
             const bg_navbar = document.querySelector(".bg-container");
-            // bg_navbar.style.top = "0%"
-            setTimeout(()=>{
-                // bg_navbar.style.position = "fixed"
-            },1000)
+            const catalogue = document.querySelector(".catalogue")
+            bg_navbar.style.top = "0%"
+            catalogue.style.opacity = "1"
         },1000)
     }
     render() {
@@ -43,6 +42,7 @@ class Catalogue extends React.Component {
 
                     <div className="catalogue">
                         <div className="filter-container">
+                            <h1>Filtro</h1>
                             <h3 className="price-title">Precio</h3>
                             <div className="txtBox-filter-container">
                                 <input className="filter" type="text" placeholder="Minimo"></input>
