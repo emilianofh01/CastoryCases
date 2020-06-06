@@ -5,7 +5,7 @@ import loading from '../media/images/loading.gif'
 import './styles/SearchResults.css'
 
 const API = "https://us-central1-castory-cases.cloudfunctions.net"
-const PATH = '/search'
+const PATH = '/quicksearch'
 var startTimeMS = 0;  // EPOCH Time of event count started
 var timerId = 0;          // Current timer handler
 var timerStep=1000;   // Time beetwen calls
@@ -26,7 +26,7 @@ class SearchResults extends React.Component {
     buscar = async () => {
         this.setState({loading: true})
         await this.startTimer()
-        if(this.props.busqueda != "") {
+        if(this.props.busqueda !== "") {
             if(timeTaken <= 1000) {
                 await fetch(API + PATH + `/${this.props.busqueda}`)
                 .then(response => response.json())
@@ -58,8 +58,11 @@ class SearchResults extends React.Component {
         timerId = setTimeout(this.eventRaised,timerStep);
     }
 
-    getRemainingTime = () => ((new Date()).getTime() - startTimeMS );
-    
+    limitar = () => {
+        const limitado = [];
+    }
+
+    getRemainingTime = () => ((new Date()).getTime() - startTimeMS );    
 
     render() {
         // console.log(this.props.busqueda)
@@ -67,12 +70,13 @@ class SearchResults extends React.Component {
         const {productos} = this.state
         const {busqueda} = this.props
         const lowerCasedFilter = removeAccents(busqueda.toLowerCase());
-        const DatosFiltrados = productos.filter(producto => removeAccents(producto.productName.toLowerCase()).includes(lowerCasedFilter))
+        const DatosFiltrados = productos.filter(producto => removeAccents(producto.productName.toLowerCase()).includes(lowerCasedFilter)).splice(0,3)
+        
         return(
             <ul className={this.props.busqueda ? "SearchComponent__results-container show": "SearchComponent__results-container"}>
                 <h3 className="results">Resultados</h3>
 
-                {DatosFiltrados.length && this.props.busqueda !== " " ? DatosFiltrados.map((producto) =>(
+                {DatosFiltrados.length && this.props.busqueda !== " " ?  DatosFiltrados.map((producto) =>(
                     
                 <li key={producto.id} className="item_result">
                     <Link onClick={this.props.reset} className="linkProduct" to={`/cases/id?=${producto.id}`}>
@@ -85,7 +89,12 @@ class SearchResults extends React.Component {
                         </Link>
                         </li>
                         )): this.state.loading ? <img className="loading" src={loading} alt="Loading"/>
-                        : <p className="NoResult">No se ha encontrado resultados resultados para tu busqueda <b>({this.props.busqueda})</b></p>}
+                            : <p className="NoResult">No se ha encontrado resultados resultados para tu busqueda <b>({this.props.busqueda})</b></p>}
+                        
+                        {lowerCasedFilter.length < DatosFiltrados.length 
+                            && this.state.loading === false 
+                                && DatosFiltrados.length > 0 ? <Link to={`/search?=${this.props.busqueda}`} className="moreButton">Ver mas</Link> 
+                                    : ""}
             </ul>
         )
     }

@@ -3,7 +3,7 @@ import './styles/SearchBar.css'
 import {Link} from 'react-router-dom'
 import SearchResults from './SearchResults'
 const API = "https://us-central1-castory-cases.cloudfunctions.net"
-const PATH = '/search'
+const PATH = '/quicksearch'
 
 // https://emilianofh01.github.io/hyperblog/data.json
 
