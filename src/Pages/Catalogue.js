@@ -23,10 +23,27 @@ class Catalogue extends React.Component {
         }
     }
 
-    componentDidMount() {
+    filtrar = async (e) => {
+        this.setState({loading:true})
+        const id = e.target.id
+        var filter = {
+            productBrand: id
+        }
+
+        await fetch(API + JSON.stringify(filter)) 
+        .then(response => response.json())
+        .then(data => this.setState({productos:data, loading: false}))
+
+    }
+
+    fetch = () => {
+        this.setState({loading:true})
         fetch(API + JSON.stringify(this.state.filter)) 
         .then(response => response.json())
         .then(data => this.setState({productos:data, loading: false}))
+    }
+    async componentDidMount() {
+        this.fetch()
         setTimeout(()=> {
             const bg_navbar = document.querySelector(".bg-container");
             const catalogue = document.querySelector(".catalogue")
@@ -42,7 +59,7 @@ class Catalogue extends React.Component {
 
                     <div className="catalogue">
                         <div className="filter-container">
-                            <h1>Filtro</h1>
+                            <h1 className="title-filter">Filtro</h1>
                             <h3 className="price-title">Precio</h3>
                             <div className="txtBox-filter-container">
                                 <input className="filter" type="text" placeholder="Minimo"></input>
@@ -50,12 +67,13 @@ class Catalogue extends React.Component {
                             </div>
                             <h3 className="price-title">Marca</h3>
                             <div className="brandFilter">
-                                <img id="apple" className="brandButtons"  alt="BrandLogo"src={appleIcon}/>
-                                <img id="xiaomi" className="brandButtons" alt="BrandLogo" src={xiaomiIcon}/>
-                                <img id="huawei" className="brandButtons" alt="BrandLogo" src={huaweiIcon}/>
-                                <img id="motorola" className="brandButtons" alt="BrandLogo" src={motorolaIcon}/>
-                                <img id="samsung" className="brandButtons" alt="BrandLogo" src={samsungIcon}/>
-                                <img id="sony"  className="brandButtons" alt="BrandLogo" src={sonyIcon}/>
+                                <img onClick={this.filtrar} id="Apple" className="brandButtons"  alt="BrandLogo"src={appleIcon}/>
+                                <img onClick={this.filtrar} id="Xiaomi" className="brandButtons" alt="BrandLogo" src={xiaomiIcon}/>
+                                <img onClick={this.filtrar} id="Huawei" className="brandButtons" alt="BrandLogo" src={huaweiIcon}/>
+                                <img onClick={this.filtrar} id="Motorola" className="brandButtons" alt="BrandLogo" src={motorolaIcon}/>
+                                <img onClick={this.filtrar} id="Samsung" className="brandButtons" alt="BrandLogo" src={samsungIcon}/>
+                                <img onClick={this.filtrar} id="Sony"  className="brandButtons" alt="BrandLogo" src={sonyIcon}/>
+                                <p id="" className="brandButtons" onClick={this.fetch}>Todas las marcas</p>
                             </div>
                         </div>
 

@@ -17,7 +17,7 @@
 }
 
 .catalogue {
-    transition-delay: 0.8s;
+    transition-delay: 0.5s;
     transition-property: all;
     transition-duration: 1s;
     transition-timing-function: ease;
@@ -84,30 +84,31 @@
     flex-wrap: wrap;
     display: flex;
     justify-content: center;
+    cursor: pointer;
 }
 
-#apple {
+#Apple {
     padding: 10px;
     background-color: black;
 }
-#huawei {
+#Huawei {
     background-color: #131313;
 }
-#motorola {
+#Motorola {
     background-color: #4279BD;
     padding: 5px;
 
 }
-#samsung {
+#Samsung {
     background-color: #004DA6;
 }
 
-#sony {
+#Sony {
     background-color: #131313;
     padding: 12px;
 
 } 
-#xiaomi {
+#Xiaomi {
     background-color: #FF6709;
 }
 
@@ -229,4 +230,38 @@ body {
 
 .title-filter {
     margin-bottom: 10px;
+}
+
+body::-webkit-scrollbar {
+    width: 8px;     /* Tamaño del scroll en vertical */
+    height: 8px;    /* Tamaño del scroll en horizontal */
+    
+}
+
+body::-webkit-scrollbar-thumb {
+    background: rgb(100, 100, 100);
+    border-radius: 4px;
+}
+
+/* Cambiamos el fondo y agregamos una sombra cuando esté en hover */
+body::-webkit-scrollbar-thumb:hover {
+    background: #b3b3b3;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* Cambiamos el fondo cuando esté en active */
+body::-webkit-scrollbar-thumb:active {
+    background-color: #999999;
+}
+
+/* Ponemos un color de fondo y redondeamos las esquinas del track */
+
+.brandFilter p {
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    width: 85%;
+
+    background-color: #006BCE;
 }
