@@ -1,6 +1,7 @@
 import React from 'react'
 import Mainscreen from '../screens/MainScreen'
 import '../Pages/styles/deviceInfo.css'
+import PhoneLoading from '../Components/LoadingPhone'
 const API = 'https://us-central1-castory-cases.cloudfunctions.net/getProduct/'
 
 class deviceInfo extends React.Component {
@@ -8,6 +9,7 @@ class deviceInfo extends React.Component {
         super(props)
         this.state = {
             quantity: 1,
+            loading:true,
             productInfo: {
                 
             },
@@ -15,6 +17,7 @@ class deviceInfo extends React.Component {
         }
     }
     async componentDidMount() {
+
         const ID = this.props.match.params.id
         await fetch(API + ID) 
         .then(response => response.json())
@@ -23,7 +26,8 @@ class deviceInfo extends React.Component {
         setTimeout(()=> {
             const bg_navbar = document.querySelector(".bg-container");
             bg_navbar.style.top = "0%"
-
+            const container = document.querySelector(".deviceInfo-container")
+            container.style.opacity = "100%"
         },1000)
     }
     render() {
@@ -31,7 +35,7 @@ class deviceInfo extends React.Component {
         return(
             <div className="deviceInfo">
                 <div className="bg-container"></div>
-                <div className="deviceInfo-container">
+                {!this.state.loading ? <div className="deviceInfo-container">
                     <div className="deviceImage-container">
                         <img className="deviceInfo_image" src={this.state.productInfo.productImages}/>
                         <div className="shareBar"></div>
@@ -65,6 +69,7 @@ class deviceInfo extends React.Component {
                         <i className="icon-cart-plus-solid cart"></i>
                     </div>
                 </div> 
+            : <PhoneLoading/>}
             </div>
         )
     }

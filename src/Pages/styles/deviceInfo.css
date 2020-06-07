@@ -2,12 +2,17 @@
     width: 100%;
     height: 100%;
     background-color: #161533;
-
+    display: flex;
+    justify-content: center;
 }
 
 .deviceInfo-container {
     display: flex;
     padding: 69px;
+    opacity: 0;
+    transition-property: all;
+    transition-duration: 0.8s;
+    transition-timing-function: ease;
 }
 
 .deviceDescription-container {
@@ -66,7 +71,7 @@
     height: 69px;
     background-color: #006BCE;
     transition-property: all;
-    transition-duration: 1s;
+    transition-duration: .5s;
     transition-timing-function: ease;
 }
 
@@ -184,19 +189,21 @@
 .deviceImage-container {
     position: sticky;
     top: 90px;
-    height: 100%;
+    height: 50%;
 }
 
 .wrapper {
     padding: 0px !important;
-    min-height: 0px !important;
+    min-height: 0vh !important;
+    display: flex;
+    justify-content: center;
 }
 
 .card-form__inner {
     box-shadow: none !important;
     padding-bottom: 0px !important;
     padding-top: 15px;
-    
+    padding: 50px !important;
 }
 
 .deviceInfo_instructions-container {
@@ -218,4 +225,7 @@
 .card-form {
     margin: initial;
     width: 100% !important;
+    min-width: 0px !important;
+    padding-top: 20px !important;
 }
+
