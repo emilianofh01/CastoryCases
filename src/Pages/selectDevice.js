@@ -7,7 +7,6 @@ import huaweiIcon from '../media/images/Huawei.png'
 import motorolaIcon from '../media/images/motorola.png'
 import samsungIcon from '../media/images/samsung.png'
 import sonyIcon from '../media/images/sony.png'
-import {Link} from 'react-router-dom'
 
 class selectDevice extends React.Component {
     irregularCircleOnLoad() {
