@@ -189,7 +189,7 @@
 
 .wrapper {
     padding: 0px !important;
-    min-width: 0px !important;
+    min-height: 0px !important;
 }
 
 .card-form__inner {
@@ -217,4 +217,5 @@
 
 .card-form {
     margin: initial;
+    width: 100% !important;
 }
