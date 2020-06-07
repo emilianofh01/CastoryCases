@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 import './styles/Catalogue.css'
 import appleIcon from '../media/images/apple.png'
 import xiaomiIcon from '../media/images/xiaomi.png'
@@ -113,16 +114,18 @@ class Catalogue extends React.Component {
                         <div className="Catalogue-list-container" >
                             {!this.state.loading ? this.state.productos.map((producto)=> (
                                 <div key={producto.id} className="cardDevice">
-                                    <div className="image-container">
-                                        <img className="deviceImage" src={producto.productImages}/>
-                                    </div>
-                                    <h2 className="deviceTitle"> {producto.productName}</h2>
-                                    <p className="productModel"> {producto.productModel} </p>
-                                    <p className="devicePrice">${producto.productPrice}.00 MXN</p>
-                                    <div className="favoriteButton-container">
-                                        <span className="icon-heart-regular"></span>
-                                        <p className="favoriteButtonText">Añadir a favoritos</p>
-                                    </div>
+                                    <Link className="catalogue-link" to={`/cases/${producto.id}`}>
+                                        <div className="image-container">
+                                            <img className="deviceImage" src={producto.productImages}/>
+                                        </div>
+                                        <h2 className="deviceTitle"> {producto.productName}</h2>
+                                        <p className="productModel"> {producto.productModel} </p>
+                                        <p className="devicePrice">${producto.productPrice}.00 MXN</p>
+                                        <div className="favoriteButton-container">
+                                            <span className="icon-heart-regular"></span>
+                                            <p className="favoriteButtonText">Añadir a favoritos</p>
+                                        </div>
+                                    </Link>
                                 </div>
                             )): <LoadingPhone className="LoadingPhone"/>}
                         </div>

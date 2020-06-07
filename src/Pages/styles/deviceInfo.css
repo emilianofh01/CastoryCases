@@ -83,6 +83,7 @@
 
 .description-titles-container {
     padding: 20px;
+    width: 50%;
 }
 
 .productName {
@@ -108,6 +109,7 @@
 
 .price-container {
     text-align: right;
+    padding: 20px;
 }
 
 .productModeltext {

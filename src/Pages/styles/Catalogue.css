@@ -290,3 +290,7 @@ body::-webkit-scrollbar-thumb:active {
     justify-self: right;
     cursor: pointer;
 }
+
+.catalogue-link {
+    color: inherit;
+}
