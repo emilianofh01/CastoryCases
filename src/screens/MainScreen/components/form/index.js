@@ -88,7 +88,7 @@ export default function CForm({
             <div className="card-form__inner">
                 <div className="card-input">
                     <label htmlFor="cardNumber" className="card-input__label">
-                        Card Number
+                        Número de tarjeta
                     </label>
                     <input
                         type="tel"
@@ -106,7 +106,7 @@ export default function CForm({
 
                 <div className="card-input">
                     <label htmlFor="cardName" className="card-input__label">
-                        Card Holder
+                        Socio
                     </label>
                     <input
                         type="text"
@@ -127,7 +127,7 @@ export default function CForm({
                                 htmlFor="cardMonth"
                                 className="card-input__label"
                             >
-                                Expiration Date
+                                Fecha de caducidad
                             </label>
                             <select
                                 className="card-input__input -select"
@@ -139,7 +139,7 @@ export default function CForm({
                                 onBlur={onCardInputBlur}
                             >
                                 <option value="" disabled>
-                                    Month
+                                    Mes
                                 </option>
 
                                 {monthsArr.map((val, index) => (
@@ -157,7 +157,7 @@ export default function CForm({
                                 onBlur={onCardInputBlur}
                             >
                                 <option value="" disabled>
-                                    Year
+                                    Año
                                 </option>
 
                                 {yearsArr.map((val, index) => (

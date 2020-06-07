@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react';
 
 export const DEFAULT_CARD_STATE = {
     cardNumber: '"#### #### #### ####',
-    cardHolder: 'FULL NAME',
+    cardHolder: 'NOMBRE COMPLETO',
     cardMonth: '',
     cardYear: '',
     cardCVV: '',

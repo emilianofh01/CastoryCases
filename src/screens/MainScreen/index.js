@@ -4,7 +4,7 @@ import Card from './components/card';
 
 const initialState = {
     cardNumber: '#### #### #### ####',
-    cardHolder: 'FULL NAME',
+    cardHolder: 'NOMBRE COMPLETO',
     cardMonth: '',
     cardYear: '',
     cardCvv: '',

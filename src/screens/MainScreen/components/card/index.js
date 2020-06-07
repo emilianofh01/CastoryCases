@@ -157,7 +157,7 @@ const Card = ({
                             onClick={() => onCardElementClick('cardHolder')}
                             ref={cardHolderRef}
                         >
-                            <div className="card-item__holder">Card Holder</div>
+                            <div className="card-item__holder">Socio</div>
                             <div className="card-item__name">
                                 <TransitionGroup
                                     component="div"
@@ -194,7 +194,7 @@ const Card = ({
                             ref={cardDateRef}
                         >
                             <label className="card-item__dateTitle">
-                                Expires
+                                Expira
                             </label>
                             <label className="card-item__dateItem">
                                 <SwitchTransition in-out>
