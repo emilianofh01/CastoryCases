@@ -1,0 +1,85 @@
+@font-face {
+    font-family: 'icomoon';
+    src:  url('./media/fonts/icomoon.eot?m5gxnc');
+    src:  url('./media/fonts/icomoon.eot?m5gxnc#iefix') format('embedded-opentype'),
+      url('./media/fonts/icomoon.ttf?m5gxnc') format('truetype'),
+      url('./media/fonts/icomoon.woff?m5gxnc') format('woff'),
+      url('./media/fonts/icomoon.svg?m5gxnc#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
+  [class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-cart-plus-solid:before {
+    content: "\e900";
+  }
+  .icon-facebook-f-brands:before {
+    content: "\e901";
+  }
+  .icon-facebook-messenger-brands:before {
+    content: "\e902";
+  }
+  .icon-heart-regular:before {
+    content: "\e903";
+  }
+  .icon-heart-solid:before {
+    content: "\e904";
+  }
+  .icon-images-regular:before {
+    content: "\e905";
+  }
+  .icon-instagram-brands:before {
+    content: "\e906";
+  }
+  .icon-paint-brush-solid:before {
+    content: "\e907";
+  }
+  .icon-redo-alt-solid:before {
+    content: "\e909";
+  }
+  .icon-search-solid:before {
+    content: "\e90a";
+  }
+  .icon-share-alt-solid:before {
+    content: "\e90b";
+  }
+  .icon-store-alt-solid:before {
+    content: "\e90d";
+  }
+  .icon-whatsapp-brands:before {
+    content: "\e90e";
+  }
+  .icon-shopping-cart-solid:before {
+    content: "\e908";
+  }
+  
+
+  @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+}
+
+html, body {
+  height: initial !important;
+  width: initial !important;
+}
+
