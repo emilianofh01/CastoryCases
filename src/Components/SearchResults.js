@@ -79,7 +79,7 @@ class SearchResults extends React.Component {
                 {DatosFiltrados.length && this.props.busqueda !== " " ?  DatosFiltrados.map((producto) =>(
                     
                 <li key={producto.id} className="item_result">
-                    <Link onClick={this.props.reset} className="linkProduct" to={`/cases/id?=${producto.id}`}>
+                    <Link onClick={this.props.reset} className="linkProduct" to={`/cases/${producto.id}`}>
                         <img className="itemImage" src={producto.productImages} alt="CasePhoto"/>
                         <div>
                             <p className="item_title">{producto.productName} - {producto.productModel}</p>

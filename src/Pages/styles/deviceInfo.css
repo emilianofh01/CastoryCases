@@ -1,0 +1,178 @@
+.deviceInfo {
+    width: 100%;
+    height: 100%;
+    background-color: #161533;
+
+}
+
+.deviceInfo-container {
+    display: flex;
+    padding: 69px;
+}
+
+.deviceDescription-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+} 
+
+.deviceInfo_instructions-container p {
+    margin-top: 10px;
+}
+
+#instructions_lastItem {
+    color: #006BCE;
+    font-weight: 700;
+}
+
+.deviceInfo-container > * {
+    width: 50%;
+    display: flex;
+    margin: 20px;
+    
+    background-color: white;
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+
+.deviceInfo_image {
+    width: 85%;
+    border-radius: 20px;
+    height: 100%;
+    object-fit: cover;
+    box-sizing: border-box;
+}
+
+.shareBar {
+    width: 15%;
+    height: 100%;
+    padding: 20px;
+    background-color: #272727;
+    box-sizing: border-box;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border: 1.5px solid white;
+
+}
+
+.bg-container {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: 69px;
+    background-color: #006BCE;
+    transition-property: all;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+}
+
+.deviceInfo-info-container {
+    background-color: #272727;
+    width: 100%;
+    height: 25%;
+    display: flex;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border: 1.5px solid white;
+    box-sizing: border-box;
+}
+
+.description-titles-container {
+    padding: 20px;
+}
+
+.productName {
+    color: white;
+    font-size: 25px;
+}
+
+.productBrand {
+    color: rgb(114, 114, 114);
+    font-weight: 500;
+}
+
+.price-container {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    font-size: 24px;
+    font-weight: 700;
+    justify-content: flex-end;
+    box-sizing: border-box;
+    color: #00C2FF;
+}
+
+.price-container {
+    text-align: right;
+}
+
+.productModeltext {
+    color: rgb(114, 114, 114);
+}
+
+.deviceInfo_instructions-container {
+    padding: 20px;
+    
+}
+
+.counter-container {
+    display: flex;
+    width: 30%;
+    margin: 20px;
+    margin-top: 0;
+    box-sizing: border-box;
+}
+
+.counter-input {
+    width: 40px;
+    height: 35px;
+    font-size: 18px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.counter-suma {
+    display: flex;
+    width: 25%;
+    background-color: #0075FF;
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.counter-resta {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-weight: 600;
+    justify-content: center;
+    width: 25%;
+    background-color: #0075FF;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    font-size: 20px;
+}
+
+.cantidad-title {
+    margin-left: 24px;
+    margin-bottom: 8px;
+}
+
+.cart {
+    position: absolute;
+    background-color: #0075FF;
+    color: white;
+    padding: 20px;
+    font-size: 24px;
+    bottom: 20px;
+    right: 20px;
+    border-radius: 50%;
+}

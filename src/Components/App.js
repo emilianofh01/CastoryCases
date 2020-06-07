@@ -7,7 +7,7 @@ import '../global.css'
 import testpage from "../test/testpage";
 import selectDevice from '../Pages/selectDevice'
 import Catalogue from '../Pages/Catalogue'
-
+import deviceInfo from '../Pages/deviceInfo'
 
 
 function App(props) {
@@ -20,6 +20,7 @@ function App(props) {
                     <Route exact path="/" component={Homepage}/>
                     <Route exact path="/personaliza" component={selectDevice}/> 
                     <Route exact path="/catalogo" component={Catalogue}/>
+                    <Route exact path="/cases/:id/" component={deviceInfo}/>
                     {/* <Redirect from="*" to="/" /> */}
             </Switch>
         </Layout>
