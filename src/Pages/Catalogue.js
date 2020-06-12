@@ -114,9 +114,15 @@ class Catalogue extends React.Component {
                         <div className="Catalogue-list-container" >
                             {!this.state.loading ? this.state.productos.map((producto)=> (
                                 <div key={producto.id} className="cardDevice">
-                                    <Link className="catalogue-link" to={`/cases/${producto.id}`}>
                                         <div className="image-container">
                                             <img className="deviceImage" src={producto.productImages}/>
+                                            <div className="comprarContainer">
+                                    <Link className="catalogue-link" to={`/cases/${producto.id}`}>
+                                                <span className="comprarContainer-button">
+                                                    ¡Comprar!
+                                                </span>
+                                    </Link>
+                                            </div>
                                         </div>
                                         <h2 className="deviceTitle"> {producto.productName}</h2>
                                         <p className="productModel"> {producto.productModel} </p>
@@ -125,7 +131,6 @@ class Catalogue extends React.Component {
                                             <span className="icon-heart-regular"></span>
                                             <p className="favoriteButtonText">Añadir a favoritos</p>
                                         </div>
-                                    </Link>
                                 </div>
                             )): <LoadingPhone className="LoadingPhone"/>}
                         </div>
